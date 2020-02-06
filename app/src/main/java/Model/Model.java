@@ -2,27 +2,26 @@ package Model;
 
 
 import android.content.SharedPreferences;
+import android.util.Log;
+
 import androidx.room.Entity;
 import com.example.mvvmtest.MainActivity;
 
 
 @Entity
-public class Model extends MainActivity {
+public class Model {
+    private String string;
 
-
-
-    // initialize SharedPreferences var
-    SharedPreferences sharedPref;
-
-        {
-
-            // get or create SharedPreferences
-            sharedPref = getSharedPreferences("myPref", MODE_PRIVATE);
-
-            // save your string in SharedPreferences
-            sharedPref.edit().putString("changedText", changedText).apply();
-
-            String changedText = sharedPref.getString("changeText", "default if empty");
-
-        }
+    public String getString() {
+        Log.v("Model", "used getString");
+        return string;
     }
+
+    public void setString(String string) {
+        this.string = string;
+    }
+
+
+}
+
+

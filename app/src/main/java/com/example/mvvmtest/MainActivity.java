@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import Model.Model;
+
 public class MainActivity extends AppCompatActivity {
 
     public TextView textView;
@@ -45,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeText(View view) {
         String inputText = editText.getText().toString();
-        textView.setText(inputText);
+        Model model = new Model();
+        model.setString(inputText);
+        textView.setText(model.getString());
 
     }
 }
