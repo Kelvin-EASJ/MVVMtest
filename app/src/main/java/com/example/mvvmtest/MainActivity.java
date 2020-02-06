@@ -12,9 +12,10 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    TextView textView;
-    EditText editText;
-    Button button;
+    public TextView textView;
+    public EditText editText;
+    public Button button;
+    public String changedText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.button);
+    }
+
 
 
 //        editText.addTextChangedListener(new TextWatcher() {
@@ -38,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 //                // TODO Auto-generated method stub
 //            }
 //        });
-    }
+
 
     public void changeText(View view) {
         String inputText = editText.getText().toString();
