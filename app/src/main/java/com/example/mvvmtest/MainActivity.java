@@ -2,6 +2,7 @@ package com.example.mvvmtest;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.database.Observable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public EditText editText;
     public Button button;
     public String changedText;
+    Model model = new Model();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,9 +49,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void changeText(View view) {
         String inputText = editText.getText().toString();
-        Model model = new Model();
         model.setString(inputText);
-        textView.setText(model.getString());
 
+    }
+
+    public void update() {
+        textView.setText(model.getString());
     }
 }
