@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     public TextView textView;
     public EditText editText;
     public Button button;
-    public String changedText;
+    public String changeText;
     Model model = new Model();
 
     @Override
@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     public void changeText(View view) {
         String inputText = editText.getText().toString();
         model.setString(inputText);
-
+        update();
     }
 
     public void update() {
