@@ -29,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.textView);
         editText = findViewById(R.id.editText);
         button = findViewById(R.id.button);
+        
+        // TODO Observer på modellen (dvs. den skal enten være Observer eller implementere en indre Observer)
     }
 
 
@@ -50,9 +52,10 @@ public class MainActivity extends AppCompatActivity {
     public void changeText(View view) {
         String inputText = editText.getText().toString();
         model.setString(inputText);
-        update();
+        update(); // TODO Opdater kun modellen (slet denne linje)
     }
 
+    // TODO Kald update ved opdateringer fra modellen
     public void update() {
         textView.setText(model.getString());
     }
