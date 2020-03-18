@@ -1,4 +1,4 @@
-package com.example.mvvmtest;
+package com.example.mvvmtest.view; // Flyttes til view
 
 import androidx.appcompat.app.AppCompatActivity;
 
